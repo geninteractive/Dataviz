@@ -60,52 +60,52 @@
         }
 
         .card {
-    /* Estilos base existentes */
-    background-color: var(--card-bg);
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    position: relative;
-    border: 1px solid transparent;
-}
+            /* Estilos base existentes */
+            background-color: var(--card-bg);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            border: 1px solid transparent;
+        }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 24px rgba(79, 195, 247, 0.4);
-    border: 1px solid var(--accent-color);
-}
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 24px rgba(79, 195, 247, 0.4);
+            border: 1px solid var(--accent-color);
+        }
 
-.card-img-container {
-    overflow: hidden;
-    border-radius: 6px 6px 0 0;
-}
+        .card-img-container {
+            overflow: hidden;
+            border-radius: 6px 6px 0 0;
+        }
 
-.card-img {
-    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    transform-origin: center center;
-}
+        .card-img {
+            transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transform-origin: center center;
+        }
 
-.card:hover .card-img {
-    transform: scale(1.08);
-}
+        .card:hover .card-img {
+            transform: scale(1.08);
+        }
 
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 6px;
-    box-shadow: 0 0 16px rgba(79, 195, 247, 0);
-    transition: all 0.4s ease;
-    pointer-events: none;
-}
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 6px;
+            box-shadow: 0 0 16px rgba(79, 195, 247, 0);
+            transition: all 0.4s ease;
+            pointer-events: none;
+        }
 
-.card:hover::before {
-    box-shadow: 0 0 16px rgba(79, 195, 247, 0.5);
-}
+        .card:hover::before {
+            box-shadow: 0 0 16px rgba(79, 195, 247, 0.5);
+        }
 
         .card-img-container {
             width: 100%;
@@ -234,7 +234,7 @@
                     <p style="color: #616161; font-size: 14px; margin-top: 8px; opacity: 0.6;">work in progress</p>
                 </div>
             </div>
-            
+
             <!-- <hr class="divider"> -->
             <div class="linkedin-link">
                 <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer">
