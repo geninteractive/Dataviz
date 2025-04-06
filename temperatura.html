@@ -106,7 +106,7 @@
             align-items: center;
             color: #e0e0e0;
             /* text-decoration: underline; */
-            font-family: 'Inter', sans-serif;
+            font-family: 'DM Sans', sans-serif;
             font-size: 14px;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -145,6 +145,7 @@
             margin-top: 0;
             font-size: 24px;
             margin-bottom: 20px;
+            font-weight: 500;
         }
 
         .info-modal p {
@@ -157,14 +158,16 @@
             max-height: 60vh;
             overflow-y: auto;
             padding-right: 10px;
+            font-weight: 400;
         }
 
         .info-content h3 {
             color: #4FC3F7;
-            font-size: 18px;
+            font-size: 11px !important;
             margin-top: 20px;
             margin-bottom: 10px;
-            font-weight: 500;
+            font-weight: 700;
+            text-transform: uppercase;
         }
 
         .info-content ul,
@@ -175,12 +178,12 @@
 
         .info-content li {
             margin-bottom: 8px;
-            color: #e0e0e0;
+            color: #9d9d9d;
             line-height: 1.5;
         }
 
         .info-content strong {
-            color: #4FC3F7;
+            color: #dddddd;
             font-weight: 500;
         }
 
@@ -311,7 +314,7 @@
                 </svg>
             </button>
             <div class="info-content">
-                <h2>Sobre esta visualización</h2>
+                <h2>Anomalías de temperatura global: Tendencias en los hemisferios norte y sur</h2>
 
                 <h3>Introducción al tema</h3>
                 <p>El cambio climático global es uno de los desafíos más críticos de nuestro tiempo. Esta visualización
@@ -322,7 +325,7 @@
                 <p>Dataset: Anomalías de temperatura global anuales relativas al período 1861-1890</p>
                 <ul>
                     <li>Período: 1850-2025 (proyección)</li>
-                    <li>Variables: Hemisferio Norte, Hemisferio Sur, Global</li>
+                    <li>Variables: Hemisferio Norte, Hemisferio Sur</li>
                     <li>Unidades: °C de desviación</li>
                     <li>Resolución temporal: Anual</li>
                 </ul>
@@ -340,8 +343,7 @@
                     <li><strong>Suavizado:</strong> Aplicación de filtro polinomial (grado 6)</li>
                 </ol>
 
-                <h3>Análisis e interpretación</h3>
-                <p><strong>Hallazgos clave:</strong></p>
+                <h3>Hallazgos clave</h3>
                 <ul>
                     <li>El hemisferio norte muestra 1.2× mayor variabilidad térmica</li>
                     <li>Eventos como El Niño (2014-2016) generan picos sincrónicos</li>
@@ -349,12 +351,9 @@
                     <li>La tasa de calentamiento post-1980 es 3× mayor que el período 1950-1980</li>
                 </ul>
 
-                <h3>Bibliografía / fuentes</h3>
+                <h3>Fuente</h3>
                 <ul>
                     <li>Our World in Data - Global Temperature Anomalies</li>
-                    <li>NASA GISS Surface Temperature Analysis</li>
-                    <li>Protocolo de Montreal (1987) - Impacto en emisiones industriales</li>
-                    <li>IPCC AR6 (2021) - Proyecciones de calentamiento regional</li>
                 </ul>
             </div>
         </div>
