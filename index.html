@@ -60,20 +60,52 @@
         }
 
         .card {
-            background-color: var(--card-bg);
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            display: block;
-        }
+    /* Estilos base existentes */
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    border: 1px solid transparent;
+}
 
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 24px rgba(79, 195, 247, 0.4);
+    border: 1px solid var(--accent-color);
+}
+
+.card-img-container {
+    overflow: hidden;
+    border-radius: 6px 6px 0 0;
+}
+
+.card-img {
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-origin: center center;
+}
+
+.card:hover .card-img {
+    transform: scale(1.08);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 6px;
+    box-shadow: 0 0 16px rgba(79, 195, 247, 0);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.card:hover::before {
+    box-shadow: 0 0 16px rgba(79, 195, 247, 0.5);
+}
 
         .card-img-container {
             width: 100%;
@@ -131,6 +163,14 @@
             margin: 24px 0;
         }
 
+        .disabled-card {
+            background-color: #1E1E1E;
+            cursor: default;
+            pointer-events: none;
+            border: 1px dashed #61616130;
+            /* Borde sutil */
+        }
+
         @media (max-width: 768px) {
             .cards-container {
                 grid-template-columns: 1fr;
@@ -148,11 +188,11 @@
         <div class="header">
             <div class="author">Nestor Tobar</div>
             <h1 class="title">
-                
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="#4FC3F7">
-                    <path d="M3 21h18v-2H3v2zm2-4h3v-5H5v5zm5 0h4V7h-4v10zm6 0h3V3h-3v14z"/>
-                  </svg>
-                  
+
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="#4FC3F7">
+                    <path d="M3 21h18v-2H3v2zm2-4h3v-5H5v5zm5 0h4V7h-4v10zm6 0h3V3h-3v14z" />
+                </svg>
+
                 Data Playground
             </h1>
         </div>
@@ -169,41 +209,44 @@
                 </div>
             </a>
 
-            <!-- Tarjeta 2 -->
-            <a href="#" class="card">
-                <div class="card-img-container">
-                    <img src="images/temperatura.png" alt="Ejemplo" class="card-img">
+            <!-- Disabled Card - Work in Progress -->
+            <div class="card disabled-card"
+                style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                <div style="text-align: center;">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="#616161" style="opacity: 0.6;">
+                        <path
+                            d="M13 18v2h4v2H7v-2h4v-2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-8z" />
+                        <path d="M12 6l-1 1h2v4h2v-4h2l-1-1-1-1-1 1z" />
+                    </svg>
+                    <p style="color: #616161; font-size: 14px; margin-top: 8px; opacity: 0.6;">work in progress</p>
                 </div>
-                <div class="card-content">
-                    <h3 class="card-title">Título de la tarjeta</h3>
-                    <p class="card-subtitle">Subtítulo descriptivo</p>
-                </div>
-            </a>
+            </div>
 
-            <!-- Tarjeta 3 -->
-            <a href="#" class="card">
-                <div class="card-img-container">
-                    <img src="images/temperatura.png" alt="Ejemplo" class="card-img">
+            <!-- Disabled Card - Work in Progress -->
+            <div class="card disabled-card"
+                style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                <div style="text-align: center;">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="#616161" style="opacity: 0.6;">
+                        <path
+                            d="M13 18v2h4v2H7v-2h4v-2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-8z" />
+                        <path d="M12 6l-1 1h2v4h2v-4h2l-1-1-1-1-1 1z" />
+                    </svg>
+                    <p style="color: #616161; font-size: 14px; margin-top: 8px; opacity: 0.6;">work in progress</p>
                 </div>
-                <div class="card-content">
-                    <h3 class="card-title">Título de la tarjeta</h3>
-                    <p class="card-subtitle">Subtítulo descriptivo</p>
-                </div>
-            </a>
+            </div>
+            
+            <!-- <hr class="divider"> -->
+            <div class="linkedin-link">
+                <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#9E9E9E"
+                        style="vertical-align:middle;margin-right:6px;">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                    <span style="color:#868686">LinkedIn</span>
+                </a>
+            </div>
         </div>
-        <br>
-        <!-- <hr class="divider"> -->
-        <div class="linkedin-link">
-            <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#9E9E9E"
-                    style="vertical-align:middle;margin-right:6px;">
-                    <path
-                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-                <span style="color:#868686">LinkedIn</span>
-            </a>
-        </div>
-    </div>
 </body>
 
 </html>
