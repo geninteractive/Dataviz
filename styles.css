@@ -107,15 +107,15 @@ body {
 
 /* Estilos para encabezado de gráfica */
 .grafica-header {
-    width: 840px;
-    margin-bottom: 30px;
+    /* width: 840px; */
+    /* margin-bottom: 30px; */
 }
 
 .grafica-titulo {
     font-family: 'Ultra', sans-serif;
     color: #e0e0e0;
     font-size: 48px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .grafica-descripcion {

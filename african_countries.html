@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>African Countries</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234FC3F7'><path d='M3 21h18v-2H3v2zm2-4h3v-5H5v5zm5 0h4V7h-4v10zm6 0h3V3h-3v14z'/></svg>">
+
+    <!-- Preconexión a servidores externos para optimizar carga -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fuentes externas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Ultra&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+
+    <!-- Librerías externas de Graphica -->
+    <script src="https://www.graphica.app/graphicajs/papaparse.min.js"></script>
+    <script src="https://www.graphica.app/graphicajs/graphica.1.0.49.js"></script>
+
+
+    <!-- Mis estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .modal-content {
+            background-color: #05262e;
+        }
+
+        .grafica-header {
+            width: 1010px;
+        }
+    </style>
+
+
+
+
+
+
+</head>
+
+<body style="background-color:#05262e;">
+
+    <a href="index.html"
+        style="display:inline-flex; align-items:center; color:#e0e0e0; text-decoration:none; font-family:'Inter',sans-serif; font-size:14px; margin:20px 0 0 20px; position:absolute; z-index:1000;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            style="margin-right:6px;">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="#e0e0e0" />
+        </svg>
+        Volver
+    </a>
+
+    <div style="position:relative;width:100vw;height:100vh;padding:0;overflow:auto;padding:50px 0 100px 0;">
+        <!-- Añadido 100px abajo -->
+        <div
+            style="display:flex;flex-direction:column;align-items:center;min-width:1010px;padding:20px 20px 100px 20px;">
+            <!-- Padding inferior extra -->
+            <!-- Título y texto -->
+            <div class="grafica-header">
+                <h1 class="grafica-titulo">
+                    Shadow Economies: The Hidden Networks of Informal Markets in Africa.
+                </h1>
+                <p class="grafica-descripcion" style="color: #2c5863;">
+                    A network analysis using weighted degree clustering to reveal cross-regionaleconomic similarities
+                    across 49 African nations (2018-2022), uncovering sixdistinct economic archetypes: from the 'North
+                    African Formalists' withemerging formal sectors to the 'Traditional Market Zones' where
+                    informaleconomies can exceed 60% of GDP.
+                </p>
+            </div>
+
+            <!-- Contenedor del gráfico -->
+            <div style="display:flex;justify-content:center;min-width:1010px;min-height:1000px;margin-bottom:30px;">
+                <script
+                    type="text/javascript">main(function () { var settings = { "annotations": [{ "criteria": { "Id": "22", "Label": "Eritrea" }, "x": -232, "y": 75, "width": 200, "align": "left", "text": "By Néstor Tobar<br />Universidad Icesi 2025", "type": "visible", "line_type": "none", "line_curvature": "line", "font_size": null, "line_color": "#000000", "text_color": "#2c5863", "line_width": 1, "text_stroke": true }, { "criteria": { "Id": "44", "Label": "Sierra Leone" }, "x": 263.87345, "y": 79.87345, "width": 200, "align": "right", "text": "<strong>Source:</strong> Dataset red<br />Economía informal", "type": "visible", "line_type": "none", "line_curvature": "line", "font_size": null, "line_color": "#000000", "text_color": "#2c5863", "line_width": 1, "text_stroke": true }], "general": { "label_config": "[Label]", "tooltip_config": "Label:\nIn-degree:\nLabel:[Label]", "layout": "circular", "default_palette": "#6da7de;#9e0059;#ddd82c;#d82222;#5ea15d;#943fa6;#63c5b5;#ff38ba;#eb861e;#ee266d", "label_placement": "radial", "labels_colored_as_marks": true, "labels_size_as_marks": false, "stroke_on_labels": false, "labels_opacity_as": "none", "amount_of_labels": 1, "label_font": "Arial Narrow", "pruning": false, "edge_form": "line", "edge_curvature": 0.89, "edge_clockwise": true, "edges_colored_as_marks": true, "edges_colored_as_marks_only_between_same_color_marks": false, "default_edge_width": 1, "default_link_alpha": 0.56, "background_color": "#05262e", "saturation": 0.27, "default_border_width": 4, "default_border_color": "#04272e", "default_size": 3, "responsive_size": true, "distribution_plot_in_front": false, "reference_lines": "none", "highlight_on_hover": true, "highlight_alpha": 0.83, "highlight_same_color_elements_on_hover": false, "title": "", "title_color": "#55a7f6", "title_align": "left", "view_width": 1010 }, "grammar": [{ "variable": "graphica.com.weighteddegree", "property": "AREA", "legend": false }, { "variable": "graphica.com.clusters", "property": "COLOR", "legend": false, "use_value_as_color": false }, { "variable": "Label", "property": "LABEL" }, { "variable": "Label", "property": "TOOLTIP" }] }; var data = "*nodes\nId;Label\n\"0\";\"N Africa\"\n\"1\";\"Mid Africa\"\n\"2\";\"W Africa\"\n\"3\";\"S Africa\"\n\"4\";\"E Africa\"\n\"5\";\"Algeria\"\n\"6\";\"Angola\"\n\"7\";\"Benin\"\n\"8\";\"Botswana\"\n\"9\";\"Burkina Faso\"\n\"10\";\"Burundi\"\n\"11\";\"Cameroon\"\n\"12\";\"Cabo Verde\"\n\"13\";\"Central African Republic\"\n\"14\";\"Chad\"\n\"15\";\"Comoros\"\n\"16\";\"Congo, Rep.\"\n\"17\";\"Congo, Dem. Rep.\"\n\"18\";\"Côte d'Ivoire\"\n\"19\";\"Djibouti\"\n\"20\";\"Egypt\"\n\"21\";\"Equatorial Guinea\"\n\"22\";\"Eritrea\"\n\"23\";\"Ethiopia\"\n\"24\";\"Gabon\"\n\"25\";\"Gambia\"\n\"26\";\"Ghana\"\n\"27\";\"Guinea\"\n\"28\";\"Guinea-Bissau\"\n\"29\";\"Kenya\"\n\"30\";\"Lesotho\"\n\"31\";\"Liberia\"\n\"32\";\"Libya\"\n\"33\";\"Madagascar\"\n\"34\";\"Malawi\"\n\"35\";\"Mali\"\n\"36\";\"Mauritania\"\n\"37\";\"Morocco\"\n\"38\";\"Mozambique\"\n\"39\";\"Namibia\"\n\"40\";\"Niger\"\n\"41\";\"Nigeria\"\n\"42\";\"Rwanda\"\n\"43\";\"Senegal\"\n\"44\";\"Sierra Leone\"\n\"45\";\"Somalia\"\n\"46\";\"South Africa\"\n\"47\";\"South Sudan\"\n\"48\";\"Sudan\"\n\"49\";\"Tanzania\"\n\"50\";\"Togo\"\n\"51\";\"Tunisia\"\n\"52\";\"Uganda\"\n\"53\";\"Zambia\"\n\n*edges\nId;Id\n\"5\";\"0\"\n\"6\";\"1\"\n\"7\";\"2\"\n\"8\";\"3\"\n\"9\";\"2\"\n\"10\";\"4\"\n\"11\";\"1\"\n\"12\";\"2\"\n\"13\";\"1\"\n\"14\";\"1\"\n\"15\";\"4\"\n\"16\";\"1\"\n\"17\";\"1\"\n\"18\";\"2\"\n\"19\";\"4\"\n\"20\";\"0\"\n\"21\";\"1\"\n\"22\";\"4\"\n\"23\";\"4\"\n\"24\";\"1\"\n\"25\";\"2\"\n\"26\";\"2\"\n\"27\";\"2\"\n\"28\";\"2\"\n\"29\";\"4\"\n\"30\";\"3\"\n\"31\";\"2\"\n\"32\";\"0\"\n\"33\";\"4\"\n\"34\";\"4\"\n\"35\";\"2\"\n\"36\";\"2\"\n\"37\";\"0\"\n\"38\";\"4\"\n\"39\";\"3\"\n\"40\";\"2\"\n\"41\";\"2\"\n\"42\";\"4\"\n\"43\";\"2\"\n\"44\";\"2\"\n\"45\";\"4\"\n\"46\";\"3\"\n\"47\";\"4\"\n\"48\";\"0\"\n\"49\";\"4\"\n\"50\";\"2\"\n\"51\";\"0\"\n\"52\";\"4\"\n\"53\";\"4\"\n\"5\";\"20\"\n\"5\";\"32\"\n\"5\";\"37\"\n\"5\";\"48\"\n\"5\";\"51\"\n\"6\";\"11\"\n\"6\";\"14\"\n\"6\";\"16\"\n\"6\";\"17\"\n\"6\";\"21\"\n\"6\";\"24\"\n\"7\";\"9\"\n\"7\";\"18\"\n\"7\";\"25\"\n\"7\";\"28\"\n\"7\";\"31\"\n\"7\";\"41\"\n\"7\";\"43\"\n\"7\";\"44\"\n\"8\";\"30\"\n\"8\";\"39\"\n\"8\";\"46\"\n\"9\";\"12\"\n\"9\";\"18\"\n\"9\";\"26\"\n\"9\";\"27\"\n\"9\";\"35\"\n\"9\";\"40\"\n\"9\";\"43\"\n\"10\";\"15\"\n\"10\";\"22\"\n\"10\";\"33\"\n\"10\";\"34\"\n\"10\";\"38\"\n\"10\";\"42\"\n\"10\";\"45\"\n\"10\";\"52\"\n\"11\";\"21\"\n\"12\";\"25\"\n\"12\";\"36\"\n\"12\";\"40\"\n\"12\";\"50\"\n\"13\";\"14\"\n\"13\";\"17\"\n\"14\";\"17\"\n\"14\";\"43\"\n\"15\";\"19\"\n\"15\";\"22\"\n\"15\";\"33\"\n\"15\";\"34\"\n\"15\";\"42\"\n\"15\";\"52\"\n\"16\";\"17\"\n\"16\";\"24\"\n\"17\";\"21\"\n\"17\";\"24\"\n\"18\";\"26\"\n\"18\";\"27\"\n\"18\";\"35\"\n\"18\";\"44\"\n\"19\";\"22\"\n\"19\";\"29\"\n\"19\";\"47\"\n\"20\";\"32\"\n\"20\";\"37\"\n\"20\";\"48\"\n\"20\";\"51\"\n\"21\";\"11\"\n\"22\";\"23\"\n\"22\";\"38\"\n\"22\";\"42\"\n\"22\";\"45\"\n\"22\";\"47\"\n\"22\";\"52\"\n\"23\";\"29\"\n\"23\";\"42\"\n\"24\";\"16\"\n\"25\";\"27\"\n\"25\";\"35\"\n\"25\";\"36\"\n\"25\";\"40\"\n\"25\";\"43\"\n\"25\";\"44\"\n\"26\";\"27\"\n\"26\";\"35\"\n\"26\";\"44\"\n\"26\";\"50\"\n\"27\";\"35\"\n\"27\";\"44\"\n\"28\";\"31\"\n\"28\";\"43\"\n\"28\";\"44\"\n\"29\";\"38\"\n\"29\";\"42\"\n\"29\";\"47\"\n\"29\";\"52\"\n\"30\";\"39\"\n\"30\";\"46\"\n\"31\";\"41\"\n\"31\";\"44\"\n\"32\";\"37\"\n\"32\";\"48\"\n\"32\";\"51\"\n\"33\";\"38\"\n\"33\";\"45\"\n\"33\";\"49\"\n\"33\";\"53\"\n\"34\";\"38\"\n\"34\";\"42\"\n\"34\";\"45\"\n\"34\";\"49\"\n\"34\";\"52\"\n\"34\";\"53\"\n\"35\";\"40\"\n\"36\";\"40\"\n\"36\";\"50\"\n\"37\";\"48\"\n\"37\";\"51\"\n\"38\";\"45\"\n\"38\";\"49\"\n\"38\";\"52\"\n\"38\";\"53\"\n\"39\";\"46\"\n\"41\";\"44\"\n\"42\";\"47\"\n\"42\";\"52\"\n\"43\";\"44\"\n\"45\";\"49\"\n\"46\";\"53\"\n\"49\";\"53\"\n"; var ds = new graphica.Dataset({ data: data, datatypes: { "Id": "string", "Label": "string" }, compute: [] }).done(function () { new graphica.Chart(this).add("8eeff4f4-6e02-4207-ac60-f2dec2dd45bc", settings); }); });</script>
+                <!-- Margen inferior -->
+                <div id="8eeff4f4-6e02-4207-ac60-f2dec2dd45bc"
+                    style="font-family:'Inter',sans-serif;width:1010px;height:1000px;background-color:#1c1b20;flex-shrink:0;border:none">
+                </div>
+            </div>
+
+            <!-- Espacio adicional de 100px (puedes poner contenido aquí si lo necesitas) -->
+            <div style="width:1010px;">
+
+                <p class="grafica-pie">
+
+                </p>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Links -->
+    <div class="action-links">
+        <div class="action-link" id="view-image-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4FC3F7">
+                <path
+                    d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                <circle cx="12" cy="12" r="3" />
+            </svg>
+            Ver imagen
+        </div>
+
+        <div class="action-link" id="download-file-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z" fill="#4FC3F7"
+                    fill-opacity="0.2" />
+                <rect x="7" y="12" width="2" height="5" fill="#4FC3F7" />
+                <rect x="11" y="10" width="2" height="7" fill="#4FC3F7" />
+                <rect x="15" y="8" width="2" height="9" fill="#4FC3F7" />
+                <path d="M14 2V8H20" stroke="#4FC3F7" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            Fichero de .GPH
+        </div>
+
+        <div class="action-link" id="about-visualization-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4FC3F7">
+                <path
+                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z" />
+            </svg>
+            Sobre la visualización
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="modal-overlay" id="image-modal">
+        <div class="modal-content">
+            <button class="close-btn" id="close-image-modal">
+                <svg viewBox="0 0 24 24" fill="#e0e0e0">
+                    <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
+            </button>
+            <div class="modal-image-container">
+                <img src="" class="modal-image" id="graph-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="info-modal">
+        <div class="modal-content info-modal">
+            <button class="close-btn" id="close-info-modal">
+                <svg viewBox="0 0 24 24" fill="#e0e0e0">
+                    <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
+            </button>
+            <div class="info-content">
+                <h2>Adopción de plataformas digitales por estrato socioeconómico (2015–2024)</h2>
+
+                <h3>Introducción al tema</h3>
+                <p>Esta visualización analiza cómo ha evolucionado el uso de plataformas digitales entre los años 2015 y
+                    2024 A través de un gráfico de líneas, se pueden identificar
+                    picos de uso, patrones diferenciados de crecimiento y posibles brechas en el acceso y apropiación
+                    tecnológica.</p>
+
+                <h3>Descripción del conjunto de datos</h3>
+                <p>Dataset: Datos sintéticos sobre adopción de plataformas tecnológicas</p>
+                <ul>
+                    <li>Período: 2015–2024</li>
+                    <li>Variables: Plataforma, Año, Estrato socioeconómico, Cantidad de usuarios</li>
+                    <li>Unidades: Número de usuarios simulados</li>
+                    <li>Resolución temporal: Anual</li>
+                </ul>
+
+                <h3>Objetivo de la visualización</h3>
+                <p>Observar cómo varía el uso de redes sociales y plataformas digitales a lo largo del tiempo
+                    según el estrato socioeconómico, e identificar diferencias significativas de adopción entre
+                    plataformas populares.</p>
+
+                <h3>Metodología</h3>
+                <ol>
+                    <li><strong>Simulación de datos:</strong> Se generaron 10.000 registros con atributos demográficos,
+                        plataforma, año y uso estimado</li>
+                    <li><strong>Agrupación:</strong> Se agregaron los datos por año, plataforma y estrato</li>
+                    <li><strong>Visualización:</strong> Gráfico de líneas con el tiempo (X) y cantidad de usuarios (Y)
+                    </li>
+                    <li><strong>Interpretación:</strong> Se identificaron los picos de uso más altos y las tendencias
+                        por estrato</li>
+                </ol>
+
+                <h3>Picos destacados por plataforma</h3>
+                <ul>
+                    <li><strong>ChatGPT (2023):</strong> Popularidad masiva por su integración educativa y productiva,
+                        especialmente en estratos altos.</li>
+                    <li><strong>Facebook (2020):</strong> Repunte durante la pandemia por su papel de conexión social en
+                        todos los estratos.</li>
+                    <li><strong>Instagram (2022):</strong> Preferida por jóvenes de estrato 3 y 5; se consolidó con el
+                        auge de Reels.</li>
+                    <li><strong>Netflix (2009):</strong> Aunque fuera del rango del gráfico, marcó el inicio del cambio
+                        digital en el entretenimiento.</li>
+                    <li><strong>Spotify (2014):</strong> Boom en acceso móvil y audio personalizado; fuerte presencia en
+                        estratos 3 y 5.</li>
+                    <li><strong>TikTok (2017):</strong> Adopción masiva en estrato 1 desde smartphones; viralidad y
+                        contenido ligero facilitaron su expansión.</li>
+                    <li><strong>Twitter (2018):</strong> Crecimiento concentrado en usuarios de estrato 5 interesados en
+                        noticias y activismo.</li>
+                    <li><strong>YouTube (2020):</strong> Uso intensivo durante el confinamiento; contenido educativo y
+                        de entretenimiento accesible en todos los estratos.</li>
+                </ul>
+
+                <h3>Fuente</h3>
+                <ul>
+                    <li>Simulación basada en tendencias de uso digital y acceso a plataformas tecnológicas por nivel
+                        socioeconómico</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="modal-control.js"></script>
+    <script>
+        document.getElementById('view-image-btn').addEventListener('click', function () {
+            // Capture graph as image (this is a placeholder - you'll need to implement actual capture)
+            const graphElement = document.getElementById('c8eca846-2af5-47b5-cfb0-2f33bed96b55');
+            // In a real implementation, you would use a library like html2canvas to capture the graph
+            // For now we'll use a placeholder
+            document.getElementById('graph-image').src = 'images/african_countries_full.png';
+            document.getElementById('image-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        document.getElementById('close-image-modal').addEventListener('click', function () {
+            document.getElementById('image-modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Download File Logic
+        document.getElementById('download-file-btn').addEventListener('click', function () {
+            const link = document.createElement('a');
+            link.href = 'source/african_countries.gph';
+            link.download = 'african_countries.gph';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });    
+    </script>
+
+
+</body>
+
+
+</html>
