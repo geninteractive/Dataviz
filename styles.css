@@ -113,14 +113,12 @@ body {
 
 .grafica-titulo {
     font-family: 'Ultra', sans-serif;
-    color: #e0e0e0;
     font-size: 48px;
     /* margin-bottom: 15px; */
 }
 
 .grafica-descripcion {
     font-family: 'Inter', sans-serif;
-    color: #9da7ca;
     font-size: 20px;
     line-height: 1.6;
     font-weight: 200;
@@ -128,7 +126,6 @@ body {
 
 .grafica-pie {
     font-family: 'Inter', sans-serif;
-    color: #9da7ca;
     font-size: 12px;
     line-height: 1.6;
     font-weight: 200;
@@ -301,3 +298,7 @@ body {
         /* Texto más legible */
     }
 }
+
+a {
+    color: inherit;
+  }
